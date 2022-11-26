@@ -13,7 +13,12 @@ const App = () => {
       >
         Change to {newButtonColor}
       </button>
-      <input type="checkbox" onChange={() => setDisabled(!disabled)} />
+      <input
+        id="disable-button-checkbox"
+        type="checkbox"
+        onChange={() => setDisabled(!disabled)}
+      />
+      <label htmlFor="disable-button-checkbox">Disable button</label>
     </div>
   )
 }

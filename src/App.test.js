@@ -43,7 +43,7 @@ test('if checkbox does not click button is enabled and disabled if checkboc clic
     render( < App / > )
     //button is enabled
     const ourButton = screen.getByRole('button')
-    const checkBox = screen.getByRole('checkbox')
+    const checkBox = screen.getByRole('checkbox', 'Disable button')
     expect(checkBox).not.toBeChecked()
     expect(ourButton).toBeEnabled()
 
