@@ -51,9 +51,9 @@ test('if checkbox does not click button is enabled and disabled if checkboc clic
     fireEvent.click(checkBox)
     expect(checkBox).toBeChecked()
     expect(ourButton).toBeDisabled()
+    expect(ourButton).toHaveStyle({
+        backgroundColor: "grey"
+    })
 
-    //click checkbox again - button is enabled
-    fireEvent.click(checkBox)
-    expect(checkBox).not.toBeChecked()
-    expect(ourButton).toBeEnabled()
+
 })
