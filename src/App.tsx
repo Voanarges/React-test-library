@@ -1,5 +1,9 @@
 import { useLayoutEffect, useState } from "react"
 
+export function replaceCamelWithSpaceas(colorName: string) {
+  return colorName.replace(/\B([A-Z])\B/g, " $1")
+}
+
 const App = () => {
   const [buttonColor, setButtonColor] = useState("red")
   const [disabled, setDisabled] = useState(false)

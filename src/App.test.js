@@ -4,6 +4,9 @@ import {
     fireEvent
 } from '@testing-library/react';
 import App from './App';
+import {
+    replaceCamelWithSpaceas
+} from './App'
 
 
 test('buttons has correct initial color, and updates when click', () => {
@@ -54,6 +57,17 @@ test('if checkbox does not click button is enabled and disabled if checkboc clic
     expect(ourButton).toHaveStyle({
         backgroundColor: "grey"
     })
+})
 
+describe('spaces before camel-case capital letters', () => {
+    test('works for no inner  capital letter', () => {
+        expect(replaceCamelWithSpaceas('Red')).toBe('Red')
+    })
+    test('for one inner  cap.letter', () => {
+        expect(replaceCamelWithSpaceas('MidnightNight')).toBe('Midnight Night')
+    })
 
+    test('for multiple inner cap.letter', () => {
+        expect(replaceCamelWithSpaceas('MediumVioletRed')).toBe('Medium Violet Red')
+    })
 })
