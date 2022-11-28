@@ -12,10 +12,10 @@ import {
 test('buttons has correct initial color, and updates when click', () => {
     render( < App / > )
 
-    const colorButton = screen.getByRole('button', 'Change to blue')
+    const colorButton = screen.getByRole('button', 'Change to Midnight')
 
     expect(colorButton).toHaveStyle({
-        backgroundColor: 'red'
+        backgroundColor: 'MediumVioletRed'
     })
 
     //click по кнопке
@@ -23,11 +23,11 @@ test('buttons has correct initial color, and updates when click', () => {
 
     //после клика ожиаем окраски кнопки в голубой цветв
     expect(colorButton).toHaveStyle({
-        backgroundColor: 'blue'
+        backgroundColor: 'MidnightBlue'
     })
 
     //по клику текст кнопки должен измениться на "Change to red"
-    expect(colorButton).toHaveTextContent("Change to red")
+    expect(colorButton).toHaveTextContent("Change to Medium Violet Red")
 
 });
 
